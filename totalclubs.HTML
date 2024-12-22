@@ -1,18 +1,16 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MSRIT Clubs</title>
     <style>
-    
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -88,7 +86,6 @@
             display: block; 
         }
 
-    
         .dark-mode-toggle {
             position: absolute;
             top: 10px;
@@ -106,7 +103,6 @@
             background-color: #777;
         }
 
-        
         .main-content {
             padding: 2rem;
             text-align: center;
@@ -119,7 +115,10 @@
             padding: 0;
         }
 
-        .clubs-list li {
+        .club-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             background-color: #fff;
             padding: 1rem;
             margin: 0.5rem 0;
@@ -128,15 +127,40 @@
             transition: transform 0.3s ease;
         }
 
-        .clubs-list li:hover {
+        .club-item:hover {
             transform: scale(1.05);
         }
 
-        .dark-mode .clubs-list li {
+        .club-logo {
+            height: 40px;
+            width: 40px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: 30px;
+        }
+
+        .club-details {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .three-dots {
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #777;
+        }
+
+        .three-dots:hover {
+            color: #555;
+        }
+
+        .dark-mode .clubs-list .club-item {
             background-color: #444;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
-
 
         footer {
             text-align: center;
@@ -166,8 +190,8 @@
                 </li>
                 <li><a href="events.html">Events</a>
                     <ul class="dropdown-content">
-                        <li><a href="#">Upcoming Events</a></li>
-                        <li><a href="#">Past Events</a></li>
+                        <li><a href="upcomingevents.html">Upcoming Events</a></li>
+                        <li><a href="pastevents.html">Past Events</a></li>
                         <li><a href="#">Event Calendar</a></li>
                     </ul>
                 </li>
@@ -181,25 +205,87 @@
         <h1>Total Clubs at MSRIT</h1>
         <p>There are a total of 17 clubs at MSRIT. Below is the list of clubs:</p>
 
-        
         <ul class="clubs-list">
-            <li>CODERIT</li>
-            <li>GDSC</li>
-            <li>DEVELOPMENT STUDENT CLUB</li>
-            <li>ROBORIT</li>
-            <li>IEEE</li>
-            <li>E-CELL</li>
-            <li>TEDXMSRIT</li>
-            <li>COMEDYCLUB</li>
-            <li>STARDUST</li>
-            <li>THEATRIX</li>
-            <li>TNT DANCING</li>
-            <li>LASYA</li>
-            <li>STUDIORIT</li>
-            <li>ICLICK</li>
-            <li>CLUTCHRIT</li>
-            <li>VELOCITA</li>
-            <li>STEER RACING</li>
+            <li class="club-item">
+                <img src="logo.png" alt="Club Logo" class="club-logo">
+                <div class="club-details">CODERIT</div>
+                <div class="three-dots">&#x22EE;</div>
+            </li>
+            <li class="club-item">
+                <img src="logo.png" alt="Club Logo" class="club-logo">
+                <div class="club-details">GDSC</div>
+                <div class="three-dots">&#x22EE;</div>
+            </li>
+            <li class="club-item">
+                <img src="logo.png" alt="Club Logo" class="club-logo">
+                <div class="club-details">ROBORIT</div>
+                <div class="three-dots">&#x22EE;</div>
+            </li>
+            <li class="club-item">
+                <img src="logo.png" alt="Club Logo" class="club-logo">
+                <div class="club-details">E-CELL</div>
+                <div class="three-dots">&#x22EE;</div>
+            </li>
+            <li class="club-item">
+                <img src="logo.png" alt="Club Logo" class="club-logo">
+                <div class="club-details">I-EEE</div>
+                <div class="three-dots">&#x22EE;</div>
+            </li>
+            <li class="club-item">
+                <img src="logo.png" alt="Club Logo" class="club-logo">
+                <div class="club-details">I CLICK</div>
+                <div class="three-dots">&#x22EE;</div>
+            </li>
+            <li class="club-item">
+                <img src="logo.png" alt="Club Logo" class="club-logo">
+                <div class="club-details">STAR DUST</div>
+                <div class="three-dots">&#x22EE;</div>
+            </li>
+            <li class="club-item">
+                <img src="logo.png" alt="Club Logo" class="club-logo">
+                <div class="club-details">GDSC</div>
+                <div class="three-dots">&#x22EE;</div>
+            </li>
+            <li class="club-item">
+                <img src="logo.png" alt="Club Logo" class="club-logo">
+                <div class="club-details">THEATRIX</div>
+                <div class="three-dots">&#x22EE;</div>
+            </li>
+            <li class="club-item">
+                <img src="logo.png" alt="Club Logo" class="club-logo">
+                <div class="club-details">TEDXMSRIT</div>
+                <div class="three-dots">&#x22EE;</div>
+            </li>
+            <li class="club-item">
+                <img src="logo.png" alt="Club Logo" class="club-logo">
+                <div class="club-details">STIER RACING</div>
+                <div class="three-dots">&#x22EE;</div>
+            </li>
+            <li class="club-item">
+                <img src="logo.png" alt="Club Logo" class="club-logo">
+                <div class="club-details">LASYA</div>
+                <div class="three-dots">&#x22EE;</div>
+            </li>
+            <li class="club-item">
+                <img src="logo.png" alt="Club Logo" class="club-logo">
+                <div class="club-details">TNT DANCING</div>
+                <div class="three-dots">&#x22EE;</div>
+            </li>
+            <li class="club-item">
+                <img src="logo.png" alt="Club Logo" class="club-logo">
+                <div class="club-details">STUDIO RIT</div>
+                <div class="three-dots">&#x22EE;</div>
+            </li>
+            <li class="club-item">
+                <img src="clutchrit.jpeg" alt="Club Logo" class="club-logo">
+                <div class="club-details">CLUTCH RIT</div>
+                <div class="three-dots">&#x22EE;</div>
+            </li>
+            <li class="club-item">
+                <img src="logo.png" alt="Club Logo" class="club-logo">
+                <div class="club-details">COMEDY Club</div>
+                <div class="three-dots">&#x22EE;</div>
+            </li>
         </ul>
     </div>
 
